@@ -1,0 +1,81 @@
+/*Reset basico*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    background-color: #f4f4f9; 
+}
+/*Header*/
+.header {
+    width: 100%;
+    background-color: #4B0082; 
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+.main-content {
+    flex-grow: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+}
+/*El Canvas*/
+.canvas {
+    border: 2px dotted black;
+    background-color: white;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+    border-radius: 8px;
+}
+/*Barra de herramientas inferior*/
+.toolbar {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+/*Estilo para los botones y el label del input*/
+/*Tamaño de los iconos*/
+.tool-button {
+    background-color: #6A0DAD; 
+    color: white;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    font-size: 1.25rem; 
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+/*Violeta más oscuro al pasar el raton*/
+
+.tool-button:hover {
+    background-color: #4B0082; 
+    transform: translateY(-2px); 
+}
+
+/*Estilo para el botón activo*/
+.tool-button.active {
+    background-color: #4B0082;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); 
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+    transform: translateY(0);
+}
+
+
+#upload-img {
+    display: none;
+}

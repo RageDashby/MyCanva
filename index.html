@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <title>MyCanva</title>
+</head>
+<body>
+
+    <header class="header">
+        <h1>MyCanva</h1>
+    </header>
+
+    <main class="main-content">
+        <canvas class="canvas" id="canvas" width="1000" height="600">
+        </canvas>
+    </main>
+    <footer class="toolbar">
+        <button id="btn-cuadrado" class="tool-button active" data-tool="cuadrado" title="Cuadrado">
+            <i class="fa-solid fa-square"></i>
+        </button>
+        <button id="btn-circulo" class="tool-button" data-tool="circulo" title="Círculo">
+            <i class="fa-solid fa-circle"></i>
+        </button>
+        <button id="btn-corazon" class="tool-button" data-tool="corazon" title="Corazón">
+            <i class="fa-solid fa-heart"></i>
+        </button>
+        <button id="btn-linea" class="tool-button" data-tool="linea" title="Pincel">
+            <i class="fa-solid fa-pencil"></i>
+        </button>
+        <button id="btn-linea-continua" class="tool-button" data-tool="linea-continua" title="Línea (dos puntos)">
+            <i class="fa-solid fa-grip-lines"></i>
+        </button> 
+        <label for="upload-img" class="tool-button" title="Subir Imagen">
+            <i class="fa-solid fa-image"></i>
+        </label>
+        <input type="file" id="upload-img" accept="image/*">
+        <button id="btn-Sticker" class="tool-button" data-tool="sticker" title="sticker">
+            <i class="fa-solid fa-note-sticky"></i>
+        </button>
+        <input type="file" id="upload-sticker" accept="image/*" style="display: none;">
+        <button id="btn-CtrlZ" class="tool-button" data-tool="ctrlz" title="Deshacer">
+            <i class="fa-solid fa-undo"></i>
+        </button>
+        <button id="btn-Rehacer" class="tool-button" title="Rehacer">
+            <i class="fa-solid fa-redo"></i>
+        </button>
+        <button id="btn-Refresh" class="tool-button" data-tool="refresh" title="Limpiar">
+            <i class="fa-solid fa-refresh"></i>
+        </button>
+        <label for="colorPicker">Elegir Color de Relleno</label>
+        <input type="color" id="pckr-Relleno" data-tool="pickerRelleno" title="Picker Relleno">
+        <label for="colorPicker">Elegir Color de Contorno</label>
+        <input type="color" id="pckr-Contorno" data-tool="pickerContorno" title="Picker Contorno">
+    </footer>
+
+    <script type="module" src="js/canvas.js"></script>
+</body>
+</html>
